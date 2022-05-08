@@ -37,8 +37,33 @@ const calculator = {
   divide,
 };
 
+function cipher(string) {
+  let temparr = string.split("");
+  console.log(temparr);
+  let convertedarr = [];
+
+  temparr.forEach((letter) => {
+    let charcode = letter.charCodeAt();
+    convertedarr.push(String.fromCharCode(charcode + 1));
+  });
+
+  return convertedarr.join("");
+}
+
+function analyzeArray(_arr) {
+  let temp = _arr.sort();
+  let min = temp[0];
+  let max = temp[temp.length - 1];
+  let average = temp.reduce((partialSum, a) => partialSum + a, 0) / temp.length;
+  let length = temp.length;
+
+  return { min, max, average, length };
+}
+
 module.exports = {
   capitalize,
   reverseString,
   calculator,
+  cipher,
+  analyzeArray,
 };
