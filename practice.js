@@ -11,7 +11,34 @@ function reverseString(string) {
   }
   return returntemp;
 }
+
+//Calculator functions
+function add(a, b) {
+  return a + b;
+}
+
+const subtract = (a, b) => {
+  return a - b;
+};
+
+const multiply = (a, b) => {
+  return a * b;
+};
+
+const divide = (a, b) => {
+  return a / b;
+};
+
+// Bundlees above functions for calculator
+const calculator = {
+  add,
+  subtract,
+  multiply,
+  divide,
+};
+
 module.exports = {
   capitalize,
   reverseString,
+  calculator,
 };
